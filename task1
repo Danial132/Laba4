@@ -1,0 +1,43 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a = 20;
+            Random rnd = new Random(100);
+            int n = rnd.Next(0, 20);
+            int[] mas = new int[a];
+            for (int i = 0; i < mas.Length; i++)
+            {
+                mas[i] = rnd.Next(-2 * n, 2 * n);              
+            }
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(mas[i] + " ");
+            }
+            Console.Write("Чётные числа:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+                if (mas[i] % 2 == 0)
+                Console.Write(mas[i] + ", ");
+            }
+            Console.Write("\nНечётные числа:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+                if (mas[i] % 2 != 0)
+                {
+                    Console.Write(mas[i] + ", ");
+                }
+            }
+            Console.ReadKey();
+        }
+    }
+}
